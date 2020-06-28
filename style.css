@@ -4,7 +4,29 @@ body{
     align-items: center;
 }
 #cube{
-    background-color: aqua;
+    
     height: 200px;
     width: 200px;
+    position: relative;
+    top: 250px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.face{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+.one{
+    background-color: aqua;
+    transition: all 1s;
+    z-index: 2;
+}
+.one:hover{
+    transform: rotate(90deg) translateZ(-100px);
+}
+.two{
+    background-color: blue;
 }
